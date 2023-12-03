@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LeetCode Problem Grabber</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="w-64 flex flex-col items-center gap-4 p-4">
+      <img class="w-1/2 drop-shadow" src="img/icon128.png" />
+      <div class="w-full flex flex-col items-center gap-2">
+        <button
+          class="w-full px-4 py-2 bg-orange-400 rounded-md text-xs text-white hover:bg-orange-600 transition ease-linear"
+          id="problemNameButton"
+        >
+          Copy Problem Name
+        </button>
+        <button
+          class="w-full px-4 py-2 bg-orange-400 rounded-md text-xs text-white hover:bg-orange-600 transition ease-linear"
+          id="problemSkeletonButton"
+        >
+          Copy Problem Skeleton
+        </button>
+      </div>
+      <footer class="flex flex-col items-center">
+        <a
+          class="text-blue-500 text-xs text-center"
+          href="https://szhao.dev/"
+          target="_blank"
+          >built for fun by stanley :)</a
+        >
+        <span id="version"></span>
+      </footer>
+    </section>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "LeetCode Problem Grabber",
+  "action": {
+    "default_icon": {
+      "16": "img/icon16.png",
+      "32": "img/icon32.png",
+      "48": "img/icon48.png",
+      "128": "img/icon128.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 3,
+  "version": "1.0",
+  "description": "Copy LeetCode problem info to clipboard for quick pasting into your IDE.",
+  "permissions": ["tabs", "activeTab", "scripting", "declarativeContent"],
+  "host_permissions": ["https://leetcode.com/problems/*"],
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/problems/*"],
+      "js": ["content-script.js"]
+    }
+  ]
+}

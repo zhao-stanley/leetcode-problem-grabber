@@ -13,7 +13,8 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
       data: `"""\n${
         document
           .querySelector("[data-track-load='description_content']")
-          .innerText.split("\n\n \n\nFollow up")[0]
+          .innerText.replaceAll("\n\n", "\n")
+          .split("\n\n \n\nFollow up")[0]
       }\n"""\n\n${document
         .getElementsByClassName("view-lines")[0]
         .innerText.replace(/[^\x00-\x7F]/g, " ")}`,

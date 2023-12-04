@@ -4,6 +4,10 @@
 
 Fun little Chrome extension I threw together quickly to copy problem data to your clipboard for easy pasting into your IDE.
 
+## Steps to Use
+
+- Navigate to a problem page
+  - Ex: `https://leetcode.com/problems/reverse-linked-list/`
 - `Copy Problem Name` - copies the problem name in the format `[Number][Problem Name].py` to be used as a filename
   - Ex: `206ReverseLinkedList.py`
 - `Copy Problem Skeleton` - copies the problem statement, examples, constraints, and code skeleton to be pasted into the body of your solution file

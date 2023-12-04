@@ -3,7 +3,12 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     for (const a of document.body.querySelectorAll("a")) {
       if (a.textContent.includes(document.title.split(" - ")[0])) {
         return chrome.runtime.sendMessage({
-          data: a.textContent.replace(/[.\s]/g, "").concat(".py"),
+          data: a.textContent
+            .replace(".", "")
+            .split(" ")
+            .map((word) => word[0].toUpperCase() + word.substring(1))
+            .join("")
+            .concat(".py"),
           type: "problemName",
         });
       }

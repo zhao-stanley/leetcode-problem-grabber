@@ -18,8 +18,14 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
       data: `"""\n${
         document
           .querySelector("[data-track-load='description_content']")
-          .innerText.replaceAll("\n\n", "\n")
-          .split("\n \nFollow up")[0]
+          .innerHTML.replaceAll("<sup>", "^")
+          .replaceAll("</sup>", "")
+          .replace(/<.*?>/g, "")
+          .replaceAll("&nbsp;", " ")
+          .replaceAll("&lt;", "<")
+          .replaceAll("&gt;", ">")
+          .replaceAll("\n\n", "\n")
+          .split("\n \nFollow up")[0]
       }\n"""\n\n${document
         .getElementsByClassName("view-lines")[0]
         .innerText.replace(/[^\x00-\x7F]/g, " ")}`,

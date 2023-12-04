@@ -27,3 +27,4 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 chrome.tabs.onActivated.addListener(changeIcon);
+chrome.tabs.onUpdated.addListener(changeIcon);
